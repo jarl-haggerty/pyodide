@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index 602244f25..67154581e 100644
+--- a/setup.py
++++ b/setup.py
+@@ -472,6 +472,10 @@ print(find_packages('examples/pybullet/gym'))
+ print("-----")
+ 
+ extensions = []
++sources = [s for s in sources if s.find('examples/') != 0 or 'pybullet' in s]
++egl_renderer_sources = [s for s in egl_renderer_sources if s.find('examples/') != 0 or 'pybullet' in s]
++print('JARL', sources)
++print('JARL', egl_renderer_sources)
+ 
+ pybullet_ext = Extension(
+     "pybullet",

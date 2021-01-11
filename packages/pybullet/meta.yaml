@@ -1,0 +1,10 @@
+
+package:
+  name: pybullet
+  version: 3.08
+
+source:
+  url: https://github.com/bulletphysics/bullet3/archive/3.08.zip 
+  patches:
+   - patches/remove_examples.patch
+
